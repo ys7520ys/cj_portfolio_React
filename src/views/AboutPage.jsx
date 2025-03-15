@@ -11,21 +11,22 @@ const AboutPage = () => {
       <Helmet>
         <html lang="ko" />
         <title>ABOUT US | CJ ENM CP License</title>
-        <meta name="description" content="회사에 대한 설명이 들어가는 곳입니다." />
+        <meta name="description" content="CJ ENM 회사의 IP " />
         <meta name="keywords" content="" />
         <link rel="canonical" href="" />
         <meta name="robots" content="" />
         
-        <meta property="og:title" content="About Us - 회사명" />
-        <meta property="og:description" content="회사에 대한 설명이 들어가는 곳입니다." />
-        <meta property="og:image" content="https://yourwebsite.com/path/to/image.jpg" />
-        <meta property="og:url" content="https://yourwebsite.com/about" />
+        <meta property="og:title" content="CJ ENM CP License" />
+        <meta property="og:description" content="CJ ENM의 다양한 라이센스로 세상을 넓혀갑니다." />
+       
+        <meta property="og:image" content="https://jovial-figolla-2d7b4d.netlify.app/images/og_cjportfolio.png" />{/* 먼저 git으로 해당 사이트를 올리고 올린 사이트에서 경로의 값을 연결해야 한다. (1200x630) og이미지 */}
+        <meta property="og:url" content="https://yourwebsite.com/about" />{/* netlify에 올린 경로의 값을 넣는다. */}
         <meta property="og:type" content="website" />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Us - 회사명" />
-        <meta name="twitter:description" content="회사에 대한 설명이 들어가는 곳입니다." />
-        <meta name="twitter:image" content="https://yourwebsite.com/path/to/image.jpg" />
+        <meta name="twitter:title" content="CJ ENM CP License" />
+        <meta name="twitter:description" content="CJ ENM의 다양한 라이센스로 세상을 넓혀갑니다." />
+            <meta name="twitter:image" content="https://jovial-figolla-2d7b4d.netlify.app/images/og_cjportfolio.png" />{/* 먼저 git으로 해당 사이트를 올리고 올린 사이트에서 경로의 값을 연결해야 한다. (1200x630) og이미지 */}
 
         <script type="application/Id+json">
         {`
