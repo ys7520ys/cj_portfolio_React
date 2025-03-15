@@ -1,4 +1,5 @@
-// news 카드 이미지(6)
+// news 카드 이미지(6) 
+//   ctrl + click으로 확인가능
 import newBoxContent1 from "../../assets/img/add_01.png";
 import newBoxContent2 from "../../assets/img/add_02.png";
 import newBoxContent3 from "../../assets/img/add_03.png";

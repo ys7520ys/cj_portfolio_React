@@ -3,4 +3,38 @@
   --black: #000;
   --black100: #111111;
   --black200: #222222;
+  --mainBlue: #3182d3;
+  --redText: red;
 }
+$white: #fff;
+$redText: red;
+$black: #000;
+$black100: #111111;
+$black200: #222222;
+$mainBlue: #3182d3;
+
+
+$breakpoints: (
+  xs: 500,
+  sm: 550,
+  md: 300,
+  lg: 400,
+);
+
+// default line style
+$line-height-default: 140%;  
+$letter-spacing-default: -2.5%;
+
+//(banner)
+// default banner font-size
+$banner-title-default: 50px;
+$banner-title-responsive-1260: clamp(24px,4.5vw,50px);
+
+$banner-subtitle-default: 17px;
+$banner-subtitle-responsive-1260: clamp(12px, 3vw ,17px);
+
+// homeBanner font-size
+$homeBanner-title-default: 65px;
+$homeBanner-subtitle-responsive-1260: clamp(30px, 5vw, 65px);
+
+//

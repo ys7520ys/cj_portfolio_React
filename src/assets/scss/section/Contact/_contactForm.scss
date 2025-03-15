@@ -14,16 +14,11 @@
     width: 1200px;
     margin: 0 auto;
     margin-bottom: 60px;
-
     @media (max-width: 1260px) {
       width: 100%;
       padding: 80px 60px 60px;
-      
-      // padding: 0px;
     }
     @media (max-width: 960px) {
-      // border-radius: 0px;
-      // box-shadow: none;
       padding: 20px 15px 40px;
       box-shadow: none;
     }
@@ -40,217 +35,94 @@
       gap: 40px;
       margin-bottom: 50px;
       @media (max-width: 1260px) {
+        @include contact__gap;
         gap: 10px;
-        margin-top: 30px;
-        margin-bottom: 20px;
-      }
-      &-item:nth-child(1){
+      } 
+      &-item:nth-child(1), &-item:nth-child(2){
         width: 50%;
         .contact__label {
-          font-size: 20px;
-          font-weight: 500;
-          margin-bottom: 10px;
-          display: block;
-          @media (max-width: 960px) {
-            font-size: clamp(14px,3vw,18px);
-          }
+          @include contact__label;
         }
         .contact__input {
-          height: 64px;
-          background-color: rgba(0, 0, 0, 0.04);
-          border: 1px solid rgba(0, 0, 0, 0.08);
-          width: 100%;
-          border-radius: 10px ;
-          font-size: 16px;
-          padding: 18px 20px;
-          box-sizing: border-box;
-          @media (max-width: 960px) {
-            height: 50px;
-          }
-        }
-      }
-      &-item:nth-child(2){
-        width: 50%;
-        .contact__label {
-          font-size: 20px;
-          font-weight: 500;
-          margin-bottom: 10px;
-          display: block;
-          @media (max-width: 960px) {
-            font-size: clamp(14px,3vw,18px);
-          }
-        }
-        .contact__input {
-          height: 64px;
-          background-color: rgba(0, 0, 0, 0.04);
-          border: 1px solid rgba(0, 0, 0, 0.08);
-          width: 100%;
-          border-radius: 10px ;
-          padding: 18px 20px;
-          box-sizing: border-box;
-          @media (max-width: 960px) {
-            height: 50px;
-          }
+          @include contact__input;
         }
       }
     }
     .contact__emailArea {
       margin-bottom: 50px;
       @media (max-width: 1260px) {
-        margin-top: 30px;
-        margin-bottom: 20px;
+        @include contact__gap;
       }
       .contact__label {
-        font-size: 20px;
-        font-weight: 500;
-        margin-bottom: 10px;
-        display: block;
-        @media (max-width: 960px) {
-          font-size: clamp(14px,3vw,18px);
-        }
+        @include contact__label;
       }
       .contact__input {
-        height: 64px;
-        background-color: rgba(0, 0, 0, 0.04);
-        border: 1px solid rgba(0, 0, 0, 0.08);        
-        width: 100%;
-        border-radius: 10px;
-        padding: 18px 20px;
-        box-sizing: border-box;
-        @media (max-width: 960px) {
-          height: 50px;
-        }
+        @include contact__input;
       }
     }
     .contact__companyArea {
       margin-bottom: 50px;
       @media (max-width: 1260px) {
-        margin-top: 30px;
-        margin-bottom: 20px;
+        @include contact__gap;
       }
       .contact__label {
-        font-size: 20px;
-        font-weight: 500;
-        margin-bottom: 10px;
-        display: block;
-        @media (max-width: 960px) {
-          font-size: clamp(14px,3vw,18px);
-        }
+        @include contact__label;
       }
       .contact__input {
-        height: 64px;
-        background-color: rgba(0, 0, 0, 0.04);
-        border: 1px solid rgba(0, 0, 0, 0.08);        
-        width: 50%;
-        border-radius: 10px;
-        padding: 18px 20px;
-        box-sizing: border-box;
-        @media (max-width: 960px) {
-          height: 50px;
-        }
+        @include contact__input;
       }
     }
     .contact__companywebArea {
       margin-bottom: 50px;
       @media (max-width: 1260px) {
-        margin-top: 30px;
-        margin-bottom: 20px;
+        @include contact__gap;
       }
       .contact__label {
-        font-size: 20px;
-        font-weight: 500;
-        display: block;
-        margin-bottom: 10px;
-        @media (max-width: 960px) {
-          font-size: clamp(14px,3vw,18px);
-        }
+        @include contact__label;
       }
       .contact__input {
-        height: 64px;
-        background-color: rgba(0, 0, 0, 0.04);
-        border: 1px solid rgba(0, 0, 0, 0.08);        
-        width: 100%;
-        border-radius: 10px;
-        padding: 18px 20px;
-        box-sizing: border-box;
-        @media (max-width: 960px) {
-          height: 50px;
-        }
+        @include contact__input;
       }
     }
     .contact__country {
       margin-bottom: 50px;
       @media (max-width: 1260px) {
-        margin-top: 30px;
-        margin-bottom: 20px;
+        @include contact__gap;
       }
       .contact__label {
-        font-size: 20px;
-        font-weight: 500;
-        display: block;
-        margin-bottom: 10px;
-        @media (max-width: 960px) {
-          font-size: clamp(14px,3vw,18px);
-        }
+        @include contact__label;
       }
       .contact__input {
-        height: 64px;
-        background-color: rgba(0, 0, 0, 0.04);
-        border: 1px solid rgba(0, 0, 0, 0.08);        
-        width: 100%;
-        border-radius: 10px;
-        padding: 18px 20px;
-        box-sizing: border-box;
-        @media (max-width: 960px) {
-          height: 50px;
-        }
+        @include contact__input;
       }
     }
     .contact__phoneArea {
       margin-top: 60px;
       margin-bottom: 150px;
       @media (max-width: 1260px) {
-        margin-top: 30px;
+        @include contact__gap;
         margin-bottom: 100px;
       }
       &-block {
         .contact__label {
-          font-size: 20px;
-          font-weight: 500;
-          margin-bottom: 10px;
-          display: block;
-          @media (max-width: 960px) {
-            font-size: clamp(14px,3vw,18px);
-          }
+          @include contact__label;
         }
         .contact__inputs {
           display: flex;
           gap: 40px;
-          @media (max-width: 960px) {
+          @media (max-width: 1260px) {
             gap: 10px;
           }
           &-input {
             padding: 18px 20px;
             box-sizing: border-box;
             &:nth-child(1){
+              @include contact__input;
               width: 30%;
-              height: 64px;
-              background-color: rgba(0, 0, 0, 0.04);
-              border: 1px solid rgba(0, 0, 0, 0.08);
-              border-radius: 10px;
-              @media (max-width: 960px) {
-                height: 50px;
-              }
             }
             &:nth-child(2){
+              @include contact__input;
               width: 70%;
-              height: 64px;
-              background-color: rgba(0, 0, 0, 0.04);
-              border: 1px solid rgba(0, 0, 0, 0.08);
-              border-radius: 10px;
-              @media (max-width: 960px) {
-                height: 50px;
-              }
             }
           }
         }
@@ -268,59 +140,28 @@
       gap: 40px;
       margin-bottom: 50px;
       @media (max-width: 1260px) {
+        @include contact__gap;
         gap: 10px;
-        margin-top: 30px;
-        margin-bottom: 20px;
       }
       &-item{
         &:nth-child(1){
           width: 50%;
           .contact__label {
-            font-size: 20px;
-            font-weight: 500;
-            margin-bottom: 10px ;
-            display: block;
-            @media (max-width: 960px) {
-              font-size: clamp(14px,3vw,18px);
-            }
+            @include contact__label;
           }
           .contact__input {
-            height: 64px;
-            background-color: rgba(0, 0, 0, 0.04);
-            border: 1px solid rgba(0, 0, 0, 0.08);
-            width: 100%;
-            border-radius: 10px;
-            padding: 18px 20px;
-            box-sizing: border-box;
-            @media (max-width: 960px) {
-              height: 50px;
-            }
+            @include contact__input;
           }
         }
       }
       &-item {
-        &:nth-child(2){
+        &:nth-child(2){ 
           width: 50%;
           .contact__label {
-            font-size: 20px;
-            font-weight: 500;
-            margin-bottom: 10px;
-            display: block;
-            @media (max-width: 960px) {
-              font-size: clamp(14px,3vw,18px);
-            }
+            @include contact__label;
           }
           .contact__input {
-            height: 64px;
-            background-color: rgba(0, 0, 0, 0.04);
-            border: 1px solid rgba(0, 0, 0, 0.08);
-            width: 100%;
-            border-radius: 10px;
-            padding: 18px 20px;
-            box-sizing: border-box;
-            @media (max-width: 960px) {
-              height: 50px;
-            }
+            @include contact__input;
           }
         }
       }
@@ -328,67 +169,40 @@
     .contact__titleArea{
       margin-top: 50px;
       @media (max-width: 1260px) {
-        margin-top: 30px;
-        margin-bottom: 20px;
+        @include contact__gap;
       }
       .contact__label{
-        font-size: 20px;
-        font-weight: 500;
-        margin-bottom: 10px;
-        display: block;
-        @media (max-width: 960px) {
-          font-size: clamp(14px,3vw,18px);
-        }
+        @include contact__label;
       }
       .contact__input{
-        height: 64px;
-        background-color: rgba(0, 0, 0, 0.04);
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        width: 100%;
-        border-radius: 10px;
-        padding: 18px 20px;
-        box-sizing: border-box;
-        @media (max-width: 960px) {
-          height: 50px;
-        }
+        @include contact__input;
       }
     }
     .contact__content {
       margin-top: 50px;
       @media (max-width: 1260px) {
-        margin-top: 30px;
-        margin-bottom: 20px;
+        @include contact__gap;
       }
       .contact__label {
-        font-size: 20px;
-        font-weight: 500;
-        margin-bottom: 10px;
-        display: block;
-        @media (max-width: 960px) {
-          font-size: clamp(14px,3vw,18px);
-        }
+        @include contact__label;
       }
       .contact__input {
-        height: 186px;
-        background-color: rgba(0, 0, 0, 0.04);
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        width: 100%;
-        border-radius: 10px;
-        padding: 18px 20px;
-        box-sizing: border-box;
+        @include contact__input;
         resize: none;
+        height: 200px;
         @media (max-width: 960px) {
-          min-height: 100px;
+          height: 150px;
+          padding: 15px 20px;
         }
       }
     }
     .fileThrow{
-      margin-top: 50px;
-      margin-bottom: 20px;
+      @include contact__gap;
       &__title{
         font-size: 20px;
         margin-bottom: 20px;
         font-weight: 600;
+        color: $black200;
         @media (max-width:960px) {
           font-size: 16px;
           margin-bottom: 10px;
@@ -425,6 +239,9 @@
           font-size: 16px;
         }
       }
+      .agreeArea__title{
+        color: $black200;
+      }
       .agreeArea__info{
         margin-top: 20px;
         background-color: rgba(0, 0, 0, 0.04);
@@ -452,6 +269,11 @@
     }
     .agreeBtn{
       padding-right: 40px;
+      font-size: 18px;
+      @media (max-width: 960px) {
+        padding-right: 20px;
+        font-size: 14px;
+      }
       input{
         margin-right: 5px;
       }

@@ -3,15 +3,13 @@
   padding-top: 100px;
   width: 100%;
   height: auto;
-  @media (max-width: 1260px) {
-    padding-top: clamp(60px,8.4vw,100px);
-  }
   @media (max-width: 960px) {
+    padding-top: clamp(60px,8.4vw,100px);
   }
   &__titleArea {
     position: relative;
     width: 1200px;
-    // min-height: 300px;
+    min-height: 300px;
     padding: 60px 0px 0px;
     margin: 0 auto;
     @media (max-width: 1260px) {
@@ -25,16 +23,16 @@
     &-titleText {
       height: 150px;
       margin: 0 auto;
-      font-size: 50px;
+      font-size: $banner-title-default;
       letter-spacing: -2.5%;
       line-height: 140%;
       font-weight: 600;
       margin-bottom: 40px;
-      color: #222222;
+      color: $black200;
       white-space: pre-line;
       @media (max-width: 1260px) {
         height: clamp(70px,11vw,150px);
-        font-size: clamp(24px, 4.5vw ,50px);
+        font-size: $banner-title-responsive-1260;
         margin-bottom: clamp(10px,4vw,40px);
         text-align: center;
       }
@@ -42,10 +40,10 @@
     &-subtitleText {
       height: 100px;
       margin: 0 auto;
-      font-size: 17px;
+      font-size: $banner-subtitle-default;
       letter-spacing: -2.5%;
       line-height: 160%;
-      color: #222222;
+      color: $black200;
       font-weight: 300;
       .mobile-br{
         display: block;
@@ -54,7 +52,7 @@
         }
       }
       @media (max-width: 1260px) {
-        font-size: clamp(12px, 3vw ,17px);
+        font-size: $banner-subtitle-responsive-1260;
         text-align: center;
       }
     }

@@ -9,7 +9,37 @@ import AnimateRoutes from "./AnimatedRoutes";
 // import LoadingScreen from "./components/LoadingScreen";
 import HomePage from "./views/HomePage";
 
+
+import { homeMainLicense } from "./constants/data/home";
+import { homeNews } from "./constants/data/home";
+import { assetGridCard } from "../src/constants/data/asset";
+import { aboutSwiper } from "./constants/data/about";
+import { newsGridCard } from "./constants/data/news";
+const preloadImages = (imageList) => {
+  imageList.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  })
+}
+
 const App = () => {
+  useEffect(() => {
+    const allImages = [
+      ...homeMainLicense.mainLicense_img.map((item) => item.img),
+      ...homeNews.news_img.map((item) => item.img),
+
+      ...newsGridCard.gridCard_img.map((item) => item.img),
+
+      ...aboutSwiper.swiper_img.first.map((item) => item.img),
+      ...aboutSwiper.swiper_img.second.map((item) => item.img),
+      ...aboutSwiper.swiper_img.third.map((item) => item.img),
+
+      ...assetGridCard.gridCard_img.tv.map((item) => item.img),
+      ...assetGridCard.gridCard_img.ani.map((item) => item.img),
+    ];
+    preloadImages(allImages);
+  },[]);
+
   useEffect(() => {
     Aos.init({
         duration: 600, // 애니메이션 지속 시간

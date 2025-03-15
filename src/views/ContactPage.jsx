@@ -3,13 +3,12 @@ import { Helmet } from "react-helmet-async";
 import ContactBanner from "../components/Contact/ContactBanner";
 import ContactForm from "../components/Contact/ContactForm";
 import Main from "../layout/Main";
-import { isMotionComponent } from "framer-motion";
 
 const ContactPage = () => {
   return (
     <>
       <Helmet>
-        <title>About Us - 회사명</title>
+        <title>CONTACT US | CJ ENM CP License</title>
         
         <meta name="description" content="회사에 대한 설명이 들어가는 곳입니다." />
         

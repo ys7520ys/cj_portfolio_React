@@ -10,7 +10,7 @@ const NewsPage = () => {
   return (
     <>
       <Helmet>
-        <title>About Us - 회사명</title>
+        <title>NEWS | CJ ENM CP License</title>
         
         <meta name="description" content="회사에 대한 설명이 들어가는 곳입니다." />
         

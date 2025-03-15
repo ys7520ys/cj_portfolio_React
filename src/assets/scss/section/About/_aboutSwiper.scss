@@ -10,8 +10,7 @@
     &-title{
       text-align: center;
       font-size: 50px;
-      line-height: 140%;
-      letter-spacing: -2.5%;
+      @include fontLineStyle;
       margin-bottom: 24px;
       @media (max-width: 1260px) {
         font-size: clamp(24px, 4.5vw ,50px);
@@ -21,8 +20,7 @@
     &-subtitle {
       text-align: center;
       font-size: 22px;
-      line-height: 140%;
-      letter-spacing: -2.5%;
+      @include fontLineStyle;
       font-weight: 400;
       margin-bottom: 120px;
       color: #767676;

@@ -51,6 +51,7 @@
       }
       &__infoBox {
         padding: 16px 24px 24px 46px;
+        color: $black200;
         &-text{
           font-size: clamp(14px,1.5vw,18px);
           @media (max-width: 950px) {

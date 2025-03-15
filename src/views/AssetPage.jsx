@@ -3,11 +3,9 @@ import { Helmet } from "react-helmet-async";
 import Main from "../layout/Main";
 import AssetSwiperBanner from "../components/Asset/AssetBanner";
 import AssetGridCard from "../components/Asset/AssetGridCard";
-import { assetCardTv } from "../constants";
 import { assetBanner, assetGridCard } from "../constants/data/asset";
 
 const AssetPage = () => {
-  // const [selectedCategory,setSelectedCategory] = useState(assetGridCard.gridCard_img);
   const [selectedCategory_img,setSelectedCategory_img] = useState(assetGridCard.gridCard_img.tv);
   const [selectedCategory_text,setSelectedCategory_text] = useState(assetBanner.banner_text.tv);
 
@@ -20,7 +18,7 @@ const AssetPage = () => {
   return (
     <>
       <Helmet>
-        <title>About Us - 회사명</title>
+        <title>ASSET | CJ ENM CP License</title>
         
         <meta name="description" content="회사에 대한 설명이 들어가는 곳입니다." />
         
@@ -39,9 +37,11 @@ const AssetPage = () => {
         <AssetSwiperBanner 
           onCategoryChangeText={handleCategoryTextChange} 
           onCategoryChangeImg={handleCategoryImgChange}
+
           selectedCategory_text={selectedCategory_text} 
-          selectedCategory_img={selectedCategory_img} 
           setSelectedCategory_text={setSelectedCategory_text}
+
+          selectedCategory_img={selectedCategory_img} 
           setSelectedCategory_img={setSelectedCategory_img}
         />
         <AssetGridCard 

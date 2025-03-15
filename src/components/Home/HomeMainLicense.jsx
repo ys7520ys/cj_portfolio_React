@@ -250,7 +250,7 @@ const HomeMainLicense = () => {
                                     </div>
                                     <div className="small__first-textBox">
                                         <p className="text__ko">{homeMainLicense.mainLicense_text.smallBox_text[0]}</p>
-                                        <p className="text__en">Entertainment Shows</p>
+                                        <p className="text__en">Entertainment<br/>Shows</p>
                                     </div>
                                 </div>
                                 <div
@@ -270,7 +270,7 @@ const HomeMainLicense = () => {
                                     </div>
                                     <div className="small__second-textBox">
                                         <p className="text__ko">{homeMainLicense.mainLicense_text.smallBox_text[1]}</p>
-                                        <p className="text__en">Entertainment Shows</p>
+                                        <p className="text__en">Entertainment<br/>Shows</p>
                                     </div>
                                 </div>
                                 <div
@@ -290,7 +290,7 @@ const HomeMainLicense = () => {
                                     </div>
                                     <div className="small__third-textBox">
                                         <p className="text__ko">{homeMainLicense.mainLicense_text.smallBox_text[2]}</p>
-                                        <p className="text__en">Entertainment Shows</p>
+                                        <p className="text__en">Entertainment<br/>Shows</p>
                                     </div>
                                 </div>
                                 <div
@@ -310,7 +310,7 @@ const HomeMainLicense = () => {
                                     </div>
                                     <div className="small__fourth-textBox">
                                         <p className="text__ko">{homeMainLicense.mainLicense_text.smallBox_text[3]}</p>
-                                        <p className="text__en">Entertainment Shows</p>
+                                        <p className="text__en">Entertainment<br/>Shows</p>
                                     </div>
                                 </div>
                             </div>

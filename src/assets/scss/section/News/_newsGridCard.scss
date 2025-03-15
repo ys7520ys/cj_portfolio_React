@@ -43,6 +43,7 @@
         padding: 16px 24px 30px;
         font-size: 18px;
         font-weight: 300;
+        color: $black200;
         @media (max-width: 1260px) {
           font-size: clamp(14px, 1.5vw, 18px);
         }

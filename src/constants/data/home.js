@@ -1,16 +1,21 @@
 // home 배너 캐릭터 이미지(4)
+//   ctrl + click으로 확인가능
 import bannerCharImg01 from "../../assets/img/banner_ch01.png";
 import bannerCharImg02 from "../../assets/img/banner_ch02.png";
 import bannerCharImg03 from "../../assets/img/banner_ch03.png";
 import bannerCharImg04 from "../../assets/img/banner_ch04.png";
+
 // home 메인 라이센스 middle 이미지(6)
+//   ctrl + click으로 확인가능
 import mainBoxContent1 from "../../assets/img/poster_01.png";
 import mainBoxContent2 from "../../assets/img/poster_02.png";
 import mainBoxContent3 from "../../assets/img/poster_03.png";
 import mainBoxContent4 from "../../assets/img/poster_04.png";
 import mainBoxContent5 from "../../assets/img/poster_05.png";
 import mainBoxContent6 from "../../assets/img/poster_06.png";
+
 // home 메인 라이센스 small 이미지(8)
+//   ctrl + click으로 확인가능
 import mainBoxContent7 from "../../assets/img/link_01.png";
 import mainBoxContent8 from "../../assets/img/link_02.png";
 import mainBoxContent9 from "../../assets/img/link_03.png";
@@ -19,7 +24,9 @@ import mainBoxContent11 from "../../assets/img/link_05.png";
 import mainBoxContent12 from "../../assets/img/link_06.png";
 import mainBoxContent13 from "../../assets/img/link_07.png";
 import mainBoxContent14 from "../../assets/img/link_08.png";
+
 // home 새로운 소식 box 이미지(3)
+//   ctrl + click으로 확인가능
 import newBoxContent1 from "../../assets/img/add_01.png";
 import newBoxContent2 from "../../assets/img/add_02.png";
 import newBoxContent3 from "../../assets/img/add_05.png";

@@ -1,4 +1,5 @@
 // about 첫 번째 스와이퍼 카드 이미지(8)
+//   ctrl + click으로 확인가능
 import swiperFirstContent1 from "../../assets/img/slideFirst_01.png";
 import swiperFirstContent2 from "../../assets/img/slideFirst_02.png";
 import swiperFirstContent3 from "../../assets/img/slideFirst_03.png";
@@ -9,6 +10,7 @@ import swiperFirstContent7 from "../../assets/img/slideFirst_07.png";
 import swiperFirstContent8 from "../../assets/img/slideFirst_08.png";
 
 // about 두 번째 스와이퍼 카드 이미지(8)
+//   ctrl + click으로 확인가능
 import swiperSecondContent1 from "../../assets/img/slideSecond_01.png";
 import swiperSecondContent2 from "../../assets/img/slideSecond_02.png";
 import swiperSecondContent3 from "../../assets/img/slideSecond_03.png";
@@ -19,6 +21,7 @@ import swiperSecondContent7 from "../../assets/img/slideSecond_07.png";
 import swiperSecondContent8 from "../../assets/img/slideSecond_08.png";
 
 // about 세 번째 스와이퍼 카드 이미지(7)
+//   ctrl + click으로 확인가능
 import swiperThirdContent1 from "../../assets/img/slideThird_01.png";
 import swiperThirdContent2 from "../../assets/img/slideThird_02.png";
 import swiperThirdContent3 from "../../assets/img/slideThird_03.png";
@@ -28,6 +31,7 @@ import swiperThirdContent6 from "../../assets/img/slideThird_06.png";
 import swiperThirdContent7 from "../../assets/img/slideThird_07.png";
 
 // about 배너 캐릭터 이미지
+//   ctrl + click으로 확인가능
 import bannerCharImg02 from "../../assets/img/banner_ch02.png";
 export const aboutBanner = {
   banner_img: bannerCharImg02,

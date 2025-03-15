@@ -1,8 +1,10 @@
 .homeMainLicense{
-  @include w1200-center;
+  width: 1200px;
+  margin: 0 auto;
   @media (max-width: 1260px) {
+    overflow: hidden;
     width: 100%;
-    padding: 0px 15px;
+    padding: 5px 15px;
   }
   &__headerLine {
     position: relative;
@@ -14,24 +16,14 @@
       position: absolute;
       font-size: 48px;
       font-weight: 600;
-      color: #222222;
+      color: $black200;
       @media (max-width: 1260px) {
         font-size: clamp(25px,4vw,48px);
       }
 
     }
     &-viewAllBtn {
-      position: absolute;
-      right: 0;
-      width: 120px;
-      height: 100%;
-      border-radius: 30px;
-      border: solid 1px #cccccc;
-      font-size: 16px;
-      color: #222222;
-      @media (max-width: 960px) {
-        font-size: clamp(14px,3vw,16px);
-      }
+      @include viewAllBtn;
     }
   }
   &__contents {
@@ -40,13 +32,12 @@
       padding-top: 20px;
     }
     @include w1200-center;
-    // .section__contentArea-top, section__contentArea-bottom
     width: 100%;
     &-top {
       display: flex;
       gap: 24px;
       width: 100%;
-      @media (max-width:950px) {
+      @media (max-width:960px) {
         display: block; 
       }
       @media (max-width:1260px) {
@@ -63,7 +54,7 @@
         @media (max-width:1260px) {
           height: 58.8vw;
         }
-        @media (max-width:950px) {
+        @media (max-width:960px) {
           border-radius: 15px;
           height: 100%;
           width: 100%;
@@ -85,7 +76,7 @@
         @media (max-width:1260px) {
           height: 58.8vw;
         }
-        @media (max-width:950px) {
+        @media (max-width:960px) {
           width: 100%;
           height: auto;
           margin-top: 4vw;
@@ -96,7 +87,6 @@
           gap: 24px;
           @media (max-width:1260px) {
             gap: 2vw;
-            // height: 464px;
           }
           &__left {
             width: 50%;
@@ -118,11 +108,7 @@
             }
           }
           &__right {
-            width: 50%;
-            height: 100%;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+            @include middleSmall-leftRight;
             @media (max-width: 960px) {
               border-radius: 15px;
             }
@@ -145,7 +131,7 @@
           @media (max-width:1260px) {
             gap: 2vw;
           }
-          @media (max-width:950px) {
+          @media (max-width:960px) {
             width: 100%;
             height: auto;
             flex-direction: column;
@@ -155,7 +141,7 @@
             height: 100%;
             border-radius: 30px;
             box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-            @media (max-width:950px) {
+            @media (max-width:960px) {
               width: 100%;
               height: clamp(60px,12vw,100px);
               border-radius: 100px;;
@@ -185,9 +171,10 @@
             }
             &-textBox {
               position: absolute;
-              bottom: 40px;
+              bottom: 30px;
               width: 100%;
               text-align: center;
+              color: $black200;
               @media (max-width: 960px) {
                 top: 50%;
                 transform: translate(0%,-50%);
@@ -224,7 +211,7 @@
                   font-size: clamp(12px,3vw,20px);
                   font-weight: 500;
                   background-color: rgba(0, 0, 0, 0.5);
-                  color: white;
+                  color: $white;
                   border-radius: 100px;
                   font-weight: 300;
                   padding: 0px 3vw;
@@ -242,7 +229,7 @@
       @media (max-width:1260px) {
         gap: 2vw;
       }
-      @media (max-width:950px) {
+      @media (max-width:960px) {
         flex-direction: column-reverse;
       }
       @media (max-width:950px) {
@@ -253,7 +240,7 @@
         @media (max-width:1260px) {
           height: 58.8vw;
         }
-        @media (max-width:950px) {
+        @media (max-width:960px) {
           width: 100%;
           height: auto;
           margin-top: 2vw;
@@ -266,11 +253,7 @@
             gap: 2vw;
           }
           &__left {
-            width: 50%;
-            height: 100%;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+            @include middleSmall-leftRight;
             &-categoryBox {
               @include category-box;
             }
@@ -282,11 +265,7 @@
             }
           }
           &__right {
-            width: 50%;
-            height: 100%;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+            @include middleSmall-leftRight;
             &-categoryBox{
               @include category-box;
             }
@@ -307,7 +286,7 @@
           @media (max-width:1260px) {
             gap: 2vw;
           }
-          @media (max-width:950px) {
+          @media (max-width:960px) {
             width: 100%;
             height: auto;
             flex-direction: column;
@@ -317,7 +296,7 @@
             height: 100%;
             border-radius: 30px;
             box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-            @media (max-width:950px) {
+            @media (max-width:960px) {
               width: 100%;
               height: clamp(60px,12vw,100px);
               border-radius: 100px;;
@@ -350,6 +329,7 @@
               bottom: 40px;
               width: 100%;
               text-align: center;
+              color: $black200;
               @media (max-width: 960px) {
                 top: 50%;
                 transform: translate(0%,-50%);
@@ -404,7 +384,7 @@
         @media (max-width:1260px) {
           height: 58.8vw;
         }
-        @media (max-width:950px) {
+        @media (max-width:960px) {
           height: 100%;
           width: 100%;
         }
