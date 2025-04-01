@@ -1,32 +1,36 @@
-import React from "react";
+import {React, useEffect, useState} from "react";
 import { Helmet } from "react-helmet-async";
 import ContactBanner from "../components/Contact/ContactBanner";
 import ContactForm from "../components/Contact/ContactForm";
 import Main from "../layout/Main";
 
 const ContactPage = () => {
+
+  const [announceText, setAnnounceText] = useState("");
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnnounceText("CONTACT 페이지로 이동하였습니다, CJ ENM에 관한 문의를 요청할 수 있는 페이지입니다. 하단에 문의자 정보 및 문의내용을 입력해주세요.");
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <Helmet>
+        <html lang="ko" />
         <title>CONTACT US | CJ ENM CP License</title>
-        
-        <meta name="description" content="회사에 대한 설명이 들어가는 곳입니다." />
-        
-        <meta property="og:title" content="About Us - 회사명" />
-        <meta property="og:description" content="회사에 대한 설명이 들어가는 곳입니다." />
-        <meta property="og:image" content="https://yourwebsite.com/path/to/image.jpg" />
-        <meta property="og:url" content="https://yourwebsite.com/about" />
-        <meta property="og:type" content="website" />
-        
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Us - 회사명" />
-        <meta name="twitter:description" content="회사에 대한 설명이 들어가는 곳입니다." />
-        <meta name="twitter:image" content="https://yourwebsite.com/path/to/image.jpg" />
+        <meta name="description" content="CJ ENM에 대한 문의와 건의를 통해서 궁금증을 해결하세요." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://jovial-figolla-2d7b4d.netlify.app/contactUs" />
       </Helmet>
-      <Main>
-        <ContactBanner />
-        <ContactForm />
-      </Main>
+      <h1 className="sr-only">
+        CJ ENM | CONTACT US 페이지
+      </h1>
+      <div aria-live="polite" className="sr-only">
+        {announceText}
+      </div>
+      <ContactBanner />
+      <ContactForm />
     </>
   )
 }

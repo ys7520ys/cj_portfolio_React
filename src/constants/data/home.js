@@ -115,9 +115,9 @@ export const homeMainLicense = {
 
 export const homeNews = {
   news_img:[
-    {"img":newBoxContent1,"alt":"코난 극장판 콜라보 상품 출시 안내 페이지로로 이동"},
-    {"img":newBoxContent2,"alt":"소이베베 신비아파트와 협업한 제품 출시 안내 페이지로 이동"},
-    {"img":newBoxContent3,"alt":"인기 애니메이션 신비아파트 여러 장르로 IP확장 안내 페이지로 이동"},
+    {"img":newBoxContent1,"alt":"코난 극장판 콜라보 상품 상세보기"},
+    {"img":newBoxContent2,"alt":"소이베베 신비아파트와 협업한 제품 출시 상세보기"},
+    {"img":newBoxContent3,"alt":"인기 애니메이션 신비아파트 여러 장르로 IP확장 알림 상세보기"},
   ],
   news_text: [
     "\"범인은 편의점에\" cu, 명탐정 코난 단독 제휴 상품 선보아",
@@ -125,3 +125,4 @@ export const homeNews = {
     "\'신비 아파트\' IP 확장...\"모든 게임사에 문 열려 있다\"",
   ],
 }
+  

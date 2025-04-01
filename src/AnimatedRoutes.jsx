@@ -6,6 +6,7 @@ import AboutPage from "./views/AboutPage";
 import AssetPage from "./views/AssetPage";
 import NewsPage from "./views/NewsPage";
 import ContactPage from "./views/ContactPage";
+import DetailPage from "./views/DetailPage";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -58,6 +59,14 @@ function AnimateRoutes() {
             element={
               <PageWrapper>
                 <ContactPage />
+              </PageWrapper>
+            }
+          />
+          <Route 
+            path="/detail"
+            element={
+              <PageWrapper>
+                <DetailPage />
               </PageWrapper>
             }
           />

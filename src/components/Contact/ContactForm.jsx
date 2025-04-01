@@ -1,22 +1,57 @@
-import { React, useEffect } from "react";
+import { React, useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
 
 const ContactForm = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    });
+    
+
+    const sectionRef = useRef();
+    // 모바일의 값에서는 translateX가 아닌 translateY의 값으로 등장해야 한다. 
+    useLayoutEffect(() => {
+        let ctx;
+        const setAnimation = () => {
+            if(ctx) ctx.revert();
+            ctx = gsap.context(() => {
+                const isMobile = window.innerWidth <= 1260;
+                if (isMobile) {
+                    gsap.from(".mobileBox", {
+                        y: 40,
+                        opacity: 0,
+                        duration: 0.5,
+                        delay: 0.2,
+                        ease: "power1.out",
+                    });
+                } else {
+                    gsap.from(".pcBox", {
+                        y: 40,
+                        opacity: 0,
+                        duration: 0.7,
+                        delay: 1,
+                        ease: "power1.out",
+                    });
+                }
+            },sectionRef);
+        };
+        setAnimation();
+        const handleResize = () => {
+            setAnimation();
+            // ScrollTrigger.refresh();
+        };
+        window.addEventListener("resize", handleResize);
+        return () => {
+            if(ctx) ctx.revert();
+            window.removeEventListener("resize", handleResize);
+        }
+    },[])
+
 
     return (
         <section
-            className="contactForm"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="600"
+            className="contactForm mobileBox pcBox"
             aria-labelledby=""
+            ref={sectionRef}
         >
             <form 
-                data-aos="fade-up" 
-                data-aos-delay="400" 
-                className="contactForm__box"
+                className="contactForm__box mobileBox pcBox"
             >
                 <h4 className="contact__legend">문의자 정보</h4>
 

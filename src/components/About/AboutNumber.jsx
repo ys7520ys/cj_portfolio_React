@@ -4,10 +4,10 @@ import { aboutNumber } from "../../constants/data/about";
 
 const AboutNumber = () => {
     const [aboutNumber__companyInfo_title, Set_aboutNumber__companyInfo_title] = useState({
-        title: { effect: "fade-up", effectOffset: "400", duration: "500" },
+        title: { effect: "fade-up", effectOffset: "0", duration: "500" },
     })
     const [aboutNumber__companyInfo_subtitle, Set_aboutNumber__companyInfo_subtitle] = useState({
-        subTitle: { effect: "fade-up", effectOffset: "200", effectDelay: "200" }
+        subTitle: { effect: "fade-up", effectOffset: "100", effectDelay: "200" }
     })
     const [aboutNumber__numBox_title, Set_aboutNumber__numBox_title] = useState({
         numBox: { effect: "fade-up", effectOffset: "200", effectDelay: "600" }
@@ -26,12 +26,12 @@ const AboutNumber = () => {
             Set_aboutNumber__companyInfo_title({
                 title: window.innerWidth <= 960
                     ? { effect: "fade-up", effectOffset: "50", duration: "100" }
-                    : { effect: "fade-up", effectOffset: "400", duration: "100" },
+                    : { effect: "fade-up", effectOffset: "0", duration: "100" },
             });
             Set_aboutNumber__companyInfo_subtitle({
                 subTitle: window.innerWidth <= 960
                     ? { effect: "fade-up", effectOffset: "50", effectDelay: "100" }
-                    : { effect: "fade-up", effectOffset: "200", effectDelay: "200" },
+                    : { effect: "fade-up", effectOffset: "100", effectDelay: "200" },
             });
             Set_aboutNumber__numBox_title({
                 numBox: window.innerWidth <= 960
@@ -97,8 +97,10 @@ const AboutNumber = () => {
                     data-aos={aboutNumber__companyInfo_title.title.effect}
                     data-aos-offset={aboutNumber__companyInfo_title.title.effectOffset}
                     data-aos-delay={aboutNumber__companyInfo_title.title.effectDelay}
+                    aria-labelledby="aboutBanner-title-part1 aboutBanner-title-part2"
                 >
-                    {aboutNumber.number_text.title}
+                    <span id="aboutBanner-title-part1">{aboutNumber.number_text.title[0]}</span><br/>
+                    <span id="aboutBanner-title-part2">{aboutNumber.number_text.title[1]}</span>
                 </h3>
                 <h4
                     className="aboutNumber__companyInfo-subtitle"
@@ -111,54 +113,67 @@ const AboutNumber = () => {
                 </h4>
             </div>
             <div className="aboutNumber__numBox">
-                <p
+
+                <p className="sr-only">해당 회사가 이룬 성과들을 알아보아요.</p>
+                <h3
                     className="aboutNumber__numBox-title"
                     data-aos={aboutNumber__numBox_title.numBox.effect}
                     data-aos-offset={aboutNumber__numBox_title.numBox.effectOffset}
                     data-aos-delay={aboutNumber__numBox_title.numBox.effectDelay}
+                    aria-hidden="true"
                 >
                     IP LICENSING & MERCHANDISING
-                </p>
+                </h3>
                 <div className="aboutNumber__numBox-contents">
+                    <p className="sr-only">가용 IP 180개 이상 달성</p>
                     <div
                         className="content"
                         data-aos={content01.num01.effect}
                         data-aos-offset={content01.num01.effectOffset}
                         data-aos-delay={content01.num01.effectDelay}
                         data-aos-duration={content01.num01.duration}
+                        aria-hidden="true"
                         ref={targetRefs[0]
-                        }>
-                        <p className="content__subtitle">가용 IP</p>
+                    }>
+                        <h4 className="content__subtitle">
+                            가용 IP
+                        </h4>
                         <p className="content__numChange">
                             <span ref={numberRefs[0]}>0</span>+
                         </p>
                     </div>
+
+                    <p className="sr-only">누적거래 파트너사 150개 이상 달성</p>
                     <div
                         className="content"
                         data-aos={content02.num02.effect}
                         data-aos-offset={content02.num02.effectOffset}
                         data-aos-delay={content02.num02.effectDelay}
                         data-aos-duration={content02.num02.duration}
+                        aria-hidden="true"
                         ref={targetRefs[1]}
                     >
-                        <p className="content__subtitle">
+                        <h4 className="content__subtitle">
                             누적 거래 파트너사
-                        </p>
+                        </h4>
                         <p className="content__numChange">
                             <span ref={numberRefs[1]}>0</span>+
                         </p>
                     </div>
+
+                    <p className="sr-only">상품화 사례 3000개 이상 달성</p>
                     <div
                         className="content"
                         data-aos={content03.num03.effect}
                         data-aos-offset={content03.num03.effectOffset}
                         data-aos-delay={content03.num03.effectDelay}
                         data-aos-duration={content03.num03.duration}
+                        aria-hidden="true"
                         ref={targetRefs[2]}
                     >
-                        <p className="content__subtitle">
+                        <h4 className="content__subtitle">
                             상품화 사례
-                        </p>
+                        </h4>
                         <p className="content__numChange">
                             <span ref={numberRefs[2]}>0</span>+
                         </p>

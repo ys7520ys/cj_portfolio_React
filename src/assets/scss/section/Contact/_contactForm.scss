@@ -94,6 +94,7 @@
       }
       .contact__input {
         @include contact__input;
+        appearance: none;
       }
     }
     .contact__phoneArea {

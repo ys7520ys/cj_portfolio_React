@@ -9,15 +9,13 @@ const AboutBanner = () => {
     return (
         <section 
             className="aboutBanner" 
-            role="banner" // 배너 역할을 부여한다.
-            aria-labelledby="aboutBannerHeading"
+            aria-hidden="true"
         >
             <div className="aboutBanner__content">
                 <img 
                     className="aboutBanner__content-char" 
                     src={aboutBanner.banner_img} 
                     alt=""
-                    aria-hidden="true"     
                 />
                 <div 
                     className="speechBubble" 
@@ -26,7 +24,6 @@ const AboutBanner = () => {
                 >
                     <h2 
                         className="speechBubble__text" 
-                        id="aboutBannerHeading" 
                     >
                         {aboutBanner.banner_text}
                     </h2>

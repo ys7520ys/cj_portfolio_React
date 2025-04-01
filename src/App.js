@@ -6,15 +6,14 @@ import "aos/dist/aos.css";
 import Header from "../src/layout/Header";
 import Footer from "../src/layout/Footer";
 import AnimateRoutes from "./AnimatedRoutes";
-// import LoadingScreen from "./components/LoadingScreen";
-import HomePage from "./views/HomePage";
-
 
 import { homeMainLicense } from "./constants/data/home";
 import { homeNews } from "./constants/data/home";
 import { assetGridCard } from "../src/constants/data/asset";
 import { aboutSwiper } from "./constants/data/about";
 import { newsGridCard } from "./constants/data/news";
+
+// 이미지의 값을 바로 로드한다. (원래 각 컴포넌트에서 로둥하여 구성하였지만, 시작 페이지에서 구성)
 const preloadImages = (imageList) => {
   imageList.forEach((src) => {
     const img = new Image();
@@ -42,17 +41,15 @@ const App = () => {
 
   useEffect(() => {
     Aos.init({
-        duration: 600, // 애니메이션 지속 시간
-        once: false, // 한 번만 실행되도록 설정
+        duration: 600, 
+        once: false, 
     });
-    Aos.refresh(); // 새로고침 시 다시 초기화
+    Aos.refresh();
   });
-  useEffect(() => {
-    window.scrollTo(0,0);
-  },[]);
 
   return (
-    <HelmetProvider>
+    <HelmetProvider> 
+      {/* 동적으로 helmet의 값을 변경하기 위해서 <HelmetProvider>로 감싸서 구성하였다. */}
       <Router>
         <Header />
         <AnimateRoutes />

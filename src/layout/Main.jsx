@@ -1,12 +1,12 @@
-import {React, useEffect} from "react";
+import { React } from "react";
 
 const Main = ({ children }) => {
 
-  return (
-    <main role="main">
-      { children }
-    </main> 
-  )
+    return (
+        <main role="main">
+            {children}
+        </main>
+    )
 }
 
 export default Main;

@@ -55,8 +55,10 @@ const AboutSwiper = () => {
                     data-aos={aboutSwiper__block_title.title.effect}
                     data-aos-offset={aboutSwiper__block_title.title.effectOffset}
                     data-aos-delay={aboutSwiper__block_title.title.effectDelay}
+                    aria-labelledby="aboutSwiper-title-part1-1 aboutSwiper-title-part1-2"
                 >
-                    {aboutSwiper.swiper_text.title[0]}
+                    <span id="aboutSwiper-title-part1-1">{aboutSwiper.swiper_text.title.first[0]}</span><br />
+                    <span id="aboutSwiper-title-part1-2">{aboutSwiper.swiper_text.title.first[1]}</span>
                 </h3>
                 <h4
                     className="aboutSwiper__block-subtitle"
@@ -72,6 +74,7 @@ const AboutSwiper = () => {
                     {...swiperSettings1} 
                     data-aos={swiperArea.swiper.effect} 
                     data-aos-offset={swiperArea.swiper.effectOffset}
+                    aria-hidden="true"
                 >
                     {aboutSwiper.swiper_img.first.map((img, index) => (
                         <SwiperSlide tabIndex="0" className="swiperArea__swiperSlide" key={index}>
@@ -86,8 +89,10 @@ const AboutSwiper = () => {
                     data-aos={aboutSwiper__block_title.title.effect}
                     data-aos-offset={aboutSwiper__block_title.title.effectOffset}
                     data-aos-delay={aboutSwiper__block_title.title.effectDelay}
+                    aria-labelledby="aboutSwiper-title-part2-1 aboutSwiper-title-part2-2"
                 >
-                    {aboutSwiper.swiper_text.title[1]}
+                    <span id="aboutSwiper-title-part2-1">{aboutSwiper.swiper_text.title.second[0]}</span><br />
+                    <span id="aboutSwiper-title-part2-2">{aboutSwiper.swiper_text.title.second[1]}</span>
                 </h3>
                 <h4
                     className="aboutSwiper__block-subtitle"
@@ -103,6 +108,7 @@ const AboutSwiper = () => {
                     {...swiperSettings1} 
                     data-aos={swiperArea.swiper.effect} 
                     data-aos-offset={swiperArea.swiper.effectOffset}
+                    aria-hidden="true"
                 >
                     {aboutSwiper.swiper_img.second.map((img, index) => (
                         <SwiperSlide tabIndex="0" className="swiperArea__swiperSlide" key={index}>
@@ -117,8 +123,10 @@ const AboutSwiper = () => {
                     data-aos={aboutSwiper__block_title.title.effect}
                     data-aos-offset={aboutSwiper__block_title.title.effectOffset}
                     data-aos-delay={aboutSwiper__block_title.title.effectDelay}
+                    aria-labelledby="aboutSwiper-title-part3-1 aboutSwiper-title-part3-2"
                 >
-                    {aboutSwiper.swiper_text.title[2]}
+                    <span id="aboutSwiper-title-part3-1">{aboutSwiper.swiper_text.title.second[0]}</span><br />
+                    <span id="aboutSwiper-title-part3-2">{aboutSwiper.swiper_text.title.second[1]}</span>
                 </h3>
                 <h4
                     className="aboutSwiper__block-subtitle"
@@ -134,6 +142,7 @@ const AboutSwiper = () => {
                     {...swiperSettings1} 
                     data-aos={swiperArea.swiper.effect} 
                     data-aos-offset={swiperArea.swiper.effectOffset}
+                    aria-hidden="true"
                 >
                     {aboutSwiper.swiper_img.third.map((img, index) => (
                         <SwiperSlide tabIndex="0" className="swiperArea__swiperSlide" key={index}>
