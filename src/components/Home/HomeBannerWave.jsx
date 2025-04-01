@@ -6,6 +6,7 @@ const HomeBannerWave = () => {
     const wave2Ref = useRef(null);
     const wave3Ref = useRef(null);
 
+
     useEffect(() => {
         // 첫 번째 웨이브 (느리게 이동)
         gsap.to(wave1Ref.current, {
@@ -35,6 +36,8 @@ const HomeBannerWave = () => {
         });
     }, []);
 
+    
+
     return (
         <div style={{ 
             position: "relative", 
@@ -61,11 +64,6 @@ const HomeBannerWave = () => {
                     ref={wave2Ref} 
                     d="M0 120 C250 150, 500 50, 750 120 S1200 180, 1400 120 V200 H0 Z" 
                     fill="rgba(142, 68, 173, 0.5)" 
-                />
-                <path 
-                    ref={wave3Ref} 
-                    d="M0 140 C300 180, 600 80, 900 140 S1200 220, 1400 140 V200 H0 Z" 
-                    fill="rgba(26, 188, 156, 0.5)" 
                 />
             </svg>
         </div>

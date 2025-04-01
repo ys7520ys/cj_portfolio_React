@@ -1,4 +1,5 @@
-// news 카드 이미지(6)
+// news 카드 이미지(6) 
+//   ctrl + click으로 확인가능
 import newBoxContent1 from "../../assets/img/add_01.png";
 import newBoxContent2 from "../../assets/img/add_02.png";
 import newBoxContent3 from "../../assets/img/add_03.png";
@@ -21,7 +22,7 @@ export const newsGridCard = {
   gridCard_img:[
     {"img": newBoxContent1, "alt": "코난 극장판 콜라보 상품 출시 안내 페이지로 이동"},
     {"img": newBoxContent2, "alt": "소이베베 신비아파트와 협업한 제품 출시 안내 페이지로 이동"},
-    {"img": newBoxContent3, "alt": "명탐정코난할로윈의신부 개봉 안내 페이지로 이동"},
+    {"img": newBoxContent3, "alt": "명탐정 코난 흑철의 어영 개봉 안내 페이지로 이동"},
     {"img": newBoxContent4, "alt": "신비아파트 조선퇴마실록 공개 안내 페이지로 이동"},
     {"img": newBoxContent5, "alt": "인기 애니메이션 신비아파트 여러 장르로 IP확장 안내 페이지로 이동"},
     {"img": newBoxContent6, "alt": "신비아파트 제로와 함께 출시한 모바일게임 타임제로 안내 페이지로 이동"},

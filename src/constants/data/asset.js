@@ -1,4 +1,5 @@
 // asset TV 카드 이미지(16)
+//   ctrl + click으로 확인가능
 import assetCardTvImg01 from "../../assets/img/asset-card15.png";
 import assetCardTvImg02 from "../../assets/img/asset-card16.png";
 import assetCardTvImg03 from "../../assets/img/asset-card17.png";
@@ -15,7 +16,9 @@ import assetCardTvImg13 from "../../assets/img/asset-card27.png";
 import assetCardTvImg14 from "../../assets/img/asset-card28.png";
 import assetCardTvImg15 from "../../assets/img/asset-card29.png";
 import assetCardTvImg16 from "../../assets/img/asset-card30.png";
+
 // asset ANI 카드 이미지(11)
+//   ctrl + click으로 확인가능
 import assetCardAniImg01 from "../../assets/img/asset-card01.png";
 import assetCardAniImg02 from "../../assets/img/asset-card02.png";
 import assetCardAniImg03 from "../../assets/img/asset-card03.png";

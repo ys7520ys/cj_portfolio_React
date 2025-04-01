@@ -1,57 +1,82 @@
-import { React, useEffect, useState } from "react";
-import { newData } from "../../constants";
+import { React, useEffect, useState, useRef, useLayoutEffect } from "react";
 import { newsGridCard } from "../../constants/data/news";
-import Aos from "aos";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { Link } from "react-router-dom";
 
 const NewsGridCard = () => {
-    const [item, Set_item] = useState({
-        item: { effect: "fade-up", effectOffset: "100" },
-    })
-    useEffect(() => {
-        const updateAOS = () => {
-            Set_item({
-                item: window.innerWidth <= 960
-                    ? { effect: "fade-up", effectOffset: "50" }
-                    : { effect: "fade-up", effectOffset: "0" },
-            });
+
+    const sectionRef = useRef();
+    useLayoutEffect(() => {
+        let ctx;
+        const setAnimation = () => {
+            if(ctx) ctx.revert();
+            ctx = gsap.context(() => {
+                const isMobile = window.innerWidth <= 960;
+                if (isMobile) {
+                    const boxes = gsap.utils.toArray(".mobileBox");
+                    gsap.utils.toArray(".mobileBox").forEach((box, i) => {
+                        gsap.from(box, {
+                            y: 40,
+                            opacity: 0,
+                            duration: 0.6,
+                            delay: 0.2,
+                            ease: "power1.out",
+                            scrollTrigger: {
+                                trigger: box,
+                                start: "top 110%",
+                                toggleActions: "play none none none"
+                            }
+                        });
+                    });
+                    setTimeout(() => {
+                        ScrollTrigger.refresh();
+                    },200)
+                } else {
+                    gsap.from(".pcBox", {
+                        opacity: 0,
+                        y: 50,
+                        delay: 1,
+                        duration: 0.5,
+                        ease: "power1.out",
+                   });
+                }
+            },sectionRef);
         };
-        updateAOS();
-        window.addEventListener("resize", updateAOS);
+        setAnimation();
+        const handleResize = () => {
+            setAnimation();
+            ScrollTrigger.refresh();
+        };
+        window.addEventListener("resize", handleResize);
         return () => {
-            window.removeEventListener("resize", updateAOS);
+            if(ctx) ctx.revert();
+            window.removeEventListener("resize", handleResize);
         }
-    }, [])
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    },[])
 
     return (
         <section
-            className="newsGridCard"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="600"
+            className="newsGridCard showBox"
+            ref={sectionRef}
         >
             <div
-                data-aos="fade-up"
-                data-aos-delay="400"
                 className="newsGridCard__contents"
             >
                 {newsGridCard.gridCard_img.map((img, index) => (
-                    <div
-                        className="item"
+                    <Link
+                        to="/detail"
+                        className="item mobileBox pcBox"
                         key={index}
-                        data-aos={item.item.effect}
-                        data-aos-offset={item.item.effectOffset}
                         tabIndex="0"
                     >
                         <div className="item__img">
                             <img src={img.img} alt={img.alt} />
                         </div>
-                        <div className="item__text">
+                        <div className="item__text" aria-hidden="true">
                             {newsGridCard.gridCard_text[index]}
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </section>

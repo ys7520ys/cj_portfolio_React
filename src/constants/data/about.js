@@ -1,4 +1,5 @@
 // about 첫 번째 스와이퍼 카드 이미지(8)
+//   ctrl + click으로 확인가능
 import swiperFirstContent1 from "../../assets/img/slideFirst_01.png";
 import swiperFirstContent2 from "../../assets/img/slideFirst_02.png";
 import swiperFirstContent3 from "../../assets/img/slideFirst_03.png";
@@ -9,6 +10,7 @@ import swiperFirstContent7 from "../../assets/img/slideFirst_07.png";
 import swiperFirstContent8 from "../../assets/img/slideFirst_08.png";
 
 // about 두 번째 스와이퍼 카드 이미지(8)
+//   ctrl + click으로 확인가능
 import swiperSecondContent1 from "../../assets/img/slideSecond_01.png";
 import swiperSecondContent2 from "../../assets/img/slideSecond_02.png";
 import swiperSecondContent3 from "../../assets/img/slideSecond_03.png";
@@ -19,6 +21,7 @@ import swiperSecondContent7 from "../../assets/img/slideSecond_07.png";
 import swiperSecondContent8 from "../../assets/img/slideSecond_08.png";
 
 // about 세 번째 스와이퍼 카드 이미지(7)
+//   ctrl + click으로 확인가능
 import swiperThirdContent1 from "../../assets/img/slideThird_01.png";
 import swiperThirdContent2 from "../../assets/img/slideThird_02.png";
 import swiperThirdContent3 from "../../assets/img/slideThird_03.png";
@@ -28,6 +31,7 @@ import swiperThirdContent6 from "../../assets/img/slideThird_06.png";
 import swiperThirdContent7 from "../../assets/img/slideThird_07.png";
 
 // about 배너 캐릭터 이미지
+//   ctrl + click으로 확인가능
 import bannerCharImg02 from "../../assets/img/banner_ch02.png";
 export const aboutBanner = {
   banner_img: bannerCharImg02,
@@ -35,7 +39,10 @@ export const aboutBanner = {
 }
 export const aboutNumber = {
   number_text: {
-    title: "글로벌 IP 기반의\n CJ ENM 커머스 사업",
+    title: [
+      "글로벌 IP 기반의", 
+      "CJ ENM 커머스 사업"
+    ],
     subtitle:[
       "국내 인기 IP의 홀더이자 해외 IP의 마스터 에이전트로서 다양한 콘텐츠와 캐릭터의 상품화 사업을 통해",
       "IP LTV를 강화하며 IP 소비자들의 라이프스타일을 한층 더 풍요롭게 합니다"
@@ -77,11 +84,25 @@ export const aboutSwiper = {
     ]
   },
   swiper_text: {
-    title: [
-      "인기 애니메이션을\n기반으로 한 캐릭터 사업",
-      "국내 외 화제성을\n입증한 K-콘텐츠 중심",
-      "최고의 글로벌 IP의\n국내 라이선스 사업"
-    ],
+    title:{
+      first:[
+        "인기 애니메이션을",
+        "기반으로 한 캐릭터 사업"
+      ],
+      second:[
+        "국내 외 화제성을",
+        "입증한 K-콘텐츠 중심"
+      ],
+      third:[
+        "최고의 글로벌 IP의",
+        "국내 라이센스 사업"
+      ]
+    },
+    // title: [
+    //   "인기 애니메이션을\n기반으로 한 캐릭터 사업",
+    //   "국내 외 화제성을\n입증한 K-콘텐츠 중심",
+    //   "최고의 글로벌 IP의\n국내 라이선스 사업"
+    // ],
     subtitle: [
       "대한민국 0413 키즈 타깃 시청점유율 50%+ 의 메가히트작 신비아파트와",
       "다양한 연령, 성별, 취향을 커버하는 다수의 애니메이션, 그리고 게임 IP까지",
