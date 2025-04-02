@@ -2,6 +2,8 @@ import { React, useEffect } from "react";
 import { aboutBanner } from "../../constants/data/about";
 
 const AboutBanner = () => {
+    
+    // 최상단 자동 스크롤
     useEffect(() => {
         window.scrollTo(0, 0);
     });

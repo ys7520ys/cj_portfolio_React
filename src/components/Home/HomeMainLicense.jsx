@@ -1,14 +1,12 @@
-import { React, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { React, useLayoutEffect, useRef} from "react";
 import { Link } from "react-router-dom";
-// import { mainData } from "../../constants";
-import { homeMainLicense } from "../../constants/data/home";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { homeMainLicense } from "../../constants/data/home";
 
-// width: 960px 이상에서 작동할 AOS 기본값
 const HomeMainLicense = () => {
-    // 향후 구성한 gsap의 className의 이름은 다시 수정해야 한다.
-    // L> ex) box, box1, box111, boxTitle, boxSubtitle
+
+    // 화면의 너비에 따른 동적 GSAP
     const sectionRef = useRef();
     useLayoutEffect(() => {
         let ctx;
@@ -97,6 +95,7 @@ const HomeMainLicense = () => {
             window.removeEventListener("resize", handleResize);
         }
     },[])
+
     return (
         <section ref={sectionRef} className="homeMainLicense">
             <p className="sr-only">CJ ENM이 가지고 있는 메인라이센스 작품들을 확인하세요.</p>

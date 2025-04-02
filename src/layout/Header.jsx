@@ -3,9 +3,13 @@ import { Link } from "react-router-dom";
 import logoImg from "../assets/img/logo.png";
 
 const Header = () => {
+
+    // 버튼 클릭 확인용 state
 	const [menuOpen, setMenuOpen] = useState(false);
 	const openBtnRef = useRef(null);
 	const closeBtnRef = useRef(null);
+
+    // 자동 포커스 함수 
 	useEffect(() => {
 		if(menuOpen) {
 			closeBtnRef.current?.focus();
@@ -26,7 +30,6 @@ const Header = () => {
 						src={logoImg} 
 						alt="CJENM 로고 이미지" 
 						aria-label="홈페이지로 이동하기" 
-						// 원래 title의 값도 aria-label과 동일하게 구성하였지만 반복적인 내용으로 인해서 제외함
 					/>
 				</Link>
 				<nav className="header__nav" role="navigation">
@@ -129,7 +132,7 @@ const Header = () => {
 							</Link>
 						</li>
 						<li className="sideMenu__lists-list">
-							<Link 
+							<Link
 								to="/contactUs" 
 								tabIndex={menuOpen ? "0" : "-1"} 
 								onClick={() => { setMenuOpen(!menuOpen) }}
@@ -140,7 +143,6 @@ const Header = () => {
 						</li>
 					</ul>
 				</nav>
-
 			</div>
 		</header>
 	)

@@ -1,11 +1,12 @@
-import { React, useEffect, useState, useRef, useLayoutEffect } from "react";
-import { newsGridCard } from "../../constants/data/news";
+import { React, useRef, useLayoutEffect } from "react";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { Link } from "react-router-dom";
+import { newsGridCard } from "../../constants/data/news";
 
 const NewsGridCard = () => {
 
+    // 화면의 너비에 따른 동적 GSAP
     const sectionRef = useRef();
     useLayoutEffect(() => {
         let ctx;

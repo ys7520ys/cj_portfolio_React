@@ -1,17 +1,15 @@
-import { React, useEffect, useState, useRef } from "react";
-import "aos/dist/aos.css";
-import { useLayoutEffect } from "react";
+import { React, useRef, useLayoutEffect } from "react";
+import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { homeNews } from "../../constants/data/home";
-import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const HomeNews = () => {
 
+    // 화면의 너비에 따른 동적 GSAP
     const sectionRef = useRef();
-
     useLayoutEffect(() => {
         let ctx;
         const setAnimation = () => {
@@ -68,60 +66,11 @@ const HomeNews = () => {
         }
     },[])
 
-
-
-    // const [homeNews__title, Set_homeNews__title] = useState({
-    //     title: { effect: "fade-up", effectOffset: "100" },
-    // })
-    // const [contentBox1, Set_contentBox1] = useState({
-    //     content1: { effect: "fade-up", delay: "100" }
-    // })
-    // const [contentBox2, Set_contentBox2] = useState({
-    //     content2: { effect: "fade-up", delay: "100" }
-    // })
-    // const [contentBox3, Set_contentBox3] = useState({
-    //     content3: { effect: "fade-up", delay: "100" }
-    // })
-
-    // useEffect(() => {
-    //     const updateAOS = () => {
-    //         Set_homeNews__title({
-    //             title: window.innerWidth <= 960
-    //                 ? { effect: "fade-up", effectOffset: "50" }
-    //                 : { effect: "slide-up", effectOffset: "100" },
-    //         });
-    //         Set_contentBox1({
-    //             content1: window.innerWidth <= 960
-    //                 ? { effect: "fade-up", effectOffset: "100", delay: "0" }
-    //                 : { effect: "fade-up", effectOffset: "100", delay: "100" }
-    //         });
-    //         Set_contentBox2({
-    //             content2: window.innerWidth <= 960
-    //                 ? { effect: "fade-up", effectOffset: "100", delay: "0" }
-    //                 : { effect: "fade-up", effectOffset: "100", delay: "200" }
-    //         });
-    //         Set_contentBox3({
-    //             content3: window.innerWidth <= 960
-    //                 ? { effect: "fade-up", effectOffset: "100", delay: "0" }
-    //                 : { effect: "fade-up", effectOffset: "100", delay: "300" }
-    //         });
-    //         setTimeout(() => {
-    //             Aos.refreshHard();
-    //         }, 100);
-    //     };
-    //     updateAOS();
-    //     window.addEventListener("resize", updateAOS);
-    //     return () => {
-    //         window.removeEventListener("resize", updateAOS);
-    //     }
-    // }, [])
     return (
         <section ref={sectionRef} className="homeNews">
             <p className="sr-only">CJ ENM 작품들의 새로운 소식들을 확인하세요.</p>
             <h4 
                 className="homeNews__title" 
-                // data-aos={homeNews__title.title.effect} 
-                // data-aos-offSet={homeNews__title.title.effectOffset}
             >
                 새로운 소식
             </h4>
@@ -129,9 +78,6 @@ const HomeNews = () => {
                 <Link
                     to="/detail"
                     tabIndex="0"
-                    // data-aos={contentBox1.content1.effect}
-                    // data-aos-delay={contentBox1.content1.delay}
-                    // data-aos-offSet={contentBox1.content1.effectOffset}
                     className="content box box1"
                 >
                     <div className="content__imgBox">
@@ -150,9 +96,6 @@ const HomeNews = () => {
                 <Link 
                     to="/detail"
                     tabIndex="0" 
-                    // data-aos={contentBox2.content2.effect} 
-                    // data-aos-delay={contentBox2.content2.delay} 
-                    // data-aos-offSet={contentBox2.content2.effectOffset} 
                     className="content box box2"
                 >
                     <div className="content__imgBox">
@@ -171,9 +114,6 @@ const HomeNews = () => {
                 <Link 
                     to="/detail"
                     tabIndex="0" 
-                    // data-aos={contentBox3.content3.effect} 
-                    // data-aos-delay={contentBox3.content3.delay} 
-                    // data-aos-offSet={contentBox3.content3.effectOffset} 
                     className="content box box3"
                 >
                     <div className="content__imgBox">
