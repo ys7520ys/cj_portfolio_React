@@ -1,11 +1,11 @@
 import { React, useEffect, useLayoutEffect, useRef } from "react";
-// import { newData } from "../../constants";
-import { newsBanner } from "../../constants/data/news";
 import gsap from "gsap";
+import { newsBanner } from "../../constants/data/news";
 
 const NewsBanner = () => {
+
+    // 화면의 너비에 따른 동적 GSAP
     const sectionRef = useRef();
-    // 모바일의 값에서는 translateX가 아닌 translateY의 값으로 등장해야 한다. 
     useLayoutEffect(() => {
         let ctx;
         const setAnimation = () => {
@@ -48,7 +48,6 @@ const NewsBanner = () => {
         setAnimation();
         const handleResize = () => {
             setAnimation();
-            // ScrollTrigger.refresh();
         };
         window.addEventListener("resize", handleResize);
         return () => {
@@ -56,29 +55,8 @@ const NewsBanner = () => {
             window.removeEventListener("resize", handleResize);
         }
     },[])
-    
-    
-    // useLayoutEffect(() => {
-    //     let ctx = gsap.context(() => {
-    //         gsap.from(".boxTitle", {
-    //             opacity: 0,
-    //             x: -100,
-    //             delay: 0.5,
-    //             duration: 0.6,
-    //             ease: "power1.out",
-    //         });  
-    //         gsap.from(".boxSubtitle", {
-    //             opacity: 0,
-    //             x: -100,
-    //             delay: 0.6,
-    //             duration: 0.6,
-    //             ease: "power1.out",
-    //         });  
-            
-    //     }, sectionRef)
-    //     return () => ctx.revert();
-    // },[])
 
+    // 최상단 자동 스크롤
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);

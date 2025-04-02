@@ -1,6 +1,6 @@
-import React, { Children } from "react";
+import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { BrowserRouter as Router, Routes, Route, useLocation, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "./views/HomePage";
 import AboutPage from "./views/AboutPage";
 import AssetPage from "./views/AssetPage";
@@ -20,7 +20,6 @@ function AnimateRoutes() {
   return (
     <>
       <AnimatePresence mode="wait">
-        {/* wait의 값을 설정하여 페이지가 전환될 때 적용된다. */}
         <Routes location={location} key={location.pathname}>
           <Route
             path="/"

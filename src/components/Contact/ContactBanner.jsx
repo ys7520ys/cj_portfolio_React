@@ -1,8 +1,10 @@
-import { React, useEffect, useRef, useLayoutEffect, useState } from "react";
+import { React, useEffect, useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { contactBanner } from "../../constants/data/contact";
 
 const ContactBanner = () => {
+
+    // 화면의 너비에 따른 동적 GSAP
     const sectionRef = useRef();
     useLayoutEffect(() => {
         let ctx;
@@ -46,7 +48,6 @@ const ContactBanner = () => {
         setAnimation();
         const handleResize = () => {
             setAnimation();
-            // ScrollTrigger.refresh();
         };
         window.addEventListener("resize", handleResize);
         return () => {
@@ -55,7 +56,7 @@ const ContactBanner = () => {
         }
     },[])
 
-
+    // 최상단 자동 스크롤
     useEffect(() => {
         window.scrollTo(0, 0);
     });
@@ -67,15 +68,10 @@ const ContactBanner = () => {
             ref={sectionRef}
         >
             <div className="contactBanner__titleArea">
-                <h2
-                    className="contactBanner__titleArea-title boxTitle"
-                >
+                <h2 className="contactBanner__titleArea-title boxTitle">
                     {contactBanner.banner_text.title}
                 </h2>
-                <h3
-                    className="contactBanner__titleArea-subtitle boxSubtitle"
-
-                >
+                <h3 className="contactBanner__titleArea-subtitle boxSubtitle">
                     {contactBanner.banner_text.subTitle[0]}<span class="mobile-br" />
                     {contactBanner.banner_text.subTitle[1]}
                 </h3>

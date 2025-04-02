@@ -1,6 +1,7 @@
 import React from "react";
 
 const Footer = () => {
+    
     return (
         <footer className="footer" role="contentinfo">
             <div className="footer__title">
@@ -13,22 +14,34 @@ const Footer = () => {
                     <nav className="footer__nav">
                         <ul className="footer__nav-lists">
                             <li className="list">
-                                <a href="#none" className="list-link">개인정보처리방침</a>
+                                <a href="#none" className="list-link">
+                                    개인정보처리방침
+                                </a>
                             </li>
                             <li className="list">
-                                <a href="#none" className="list-link">법적고지</a>
+                                <a href="#none" className="list-link">
+                                    법적고지
+                                </a>
                             </li>
                             <li className="list">
-                                <a href="#none" className="list-link">이메일무단수집거부</a>
+                                <a href="#none" className="list-link">
+                                    이메일무단수집거부
+                                </a>
                             </li>
                         </ul>
                     </nav>
                     <div className="footer__language">
                         <label for="options" className="footer__language-label"></label>
                         <select name="" id="options" className="footer__language-select">
-                            <option value="option1">KO</option>
-                            <option value="option2">EN</option>
-                            <option value="option3">JP</option>
+                            <option value="option1">
+                                KO
+                            </option>
+                            <option value="option2">
+                                EN
+                            </option>
+                            <option value="option3">
+                                JP
+                            </option>
                         </select>
                     </div>
                 </div>

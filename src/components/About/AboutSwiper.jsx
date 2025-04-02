@@ -9,6 +9,8 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
 const AboutSwiper = () => {
+
+    // 동적 AOS state저장소
     const [aboutSwiper__block_title, Set_aboutSwiper__block_title] = useState({
         title: { effect: "fade-up", effectOffset: "400", effectDelay: "100" }
     })
@@ -18,6 +20,8 @@ const AboutSwiper = () => {
     const [swiperArea, Set_swiperArea] = useState({
         swiper: { effect: "zoom-out", effectOffset: "100" }
     })
+
+    // 동적 AOS 조건문 동작
     useEffect(() => {
         const updateAOS = () => {
             Set_aboutSwiper__block_title({
@@ -36,7 +40,7 @@ const AboutSwiper = () => {
                     : { effect: "zoom-out", effectOffset: "100" }
             });
             setTimeout(() => {
-                Aos.refreshHard(); // ✅ 강제 AOS 재적용
+                Aos.refreshHard(); 
             }, 100);
         };
         updateAOS();

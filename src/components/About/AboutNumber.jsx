@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 import { aboutNumber } from "../../constants/data/about";
 
 const AboutNumber = () => {
+    
+    // 동적 AOS state저장소
     const [aboutNumber__companyInfo_title, Set_aboutNumber__companyInfo_title] = useState({
         title: { effect: "fade-up", effectOffset: "0", duration: "500" },
     })
@@ -21,6 +23,8 @@ const AboutNumber = () => {
     const [content03, Set_content03] = useState({
         num03: { effect: "fade-up", effectOffset: "200", effectDelay: "300", duration: "1800" }
     })
+
+    // 동적 AOS 조건문 동작
     useEffect(() => {
         const updateAOS = () => {
             Set_aboutNumber__companyInfo_title({
@@ -62,6 +66,7 @@ const AboutNumber = () => {
         }
     }, [])
 
+    // 숫자 애니메이션 변동 Ref
     const numberRefs = [useRef(null), useRef(null), useRef(null)];
     const targetRefs = [useRef(null), useRef(null), useRef(null)];
     const endValues = [180, 150, 3000];

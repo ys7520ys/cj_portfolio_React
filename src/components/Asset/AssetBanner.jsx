@@ -3,21 +3,29 @@ import gsap from "gsap";
 import { assetBanner } from "../../constants/data/asset";
 import { assetGridCard } from "../../constants/data/asset";
 
-const AssetBanner = ({ onCategoryChangeImg, onCategoryChangeText, onCategoryChangeSrOnly,categoryChangeCheck, selectedCategory_text }) => {
+const AssetBanner = ({ 
+        onCategoryChangeImg, 
+        onCategoryChangeText, 
+        onCategoryChangeSrOnly, 
+        selectedCategory_text 
+    }) => {
 
+    // 버튼 클릭 확인용 state
     const [btnActive, setBtnActive] = useState(false);
 
+    // 버튼 클릭 확인용 함수
     const btnToggle = () => {
         setBtnActive((prev) => !prev);
     }
 
+    // 버튼 동적 조건부 변경
     useEffect(() => {
         onCategoryChangeImg(btnActive ? assetGridCard.gridCard_img.ani : assetGridCard.gridCard_img.tv);
         onCategoryChangeText(btnActive ? assetBanner.banner_text.ani : assetBanner.banner_text.tv);
         onCategoryChangeSrOnly(btnActive ? "애니메이션" : "TV프로그램");    
-
     },[btnActive]);
 
+    // 화면의 너비에 따른 동적 GSAP
     const sectionRef = useRef();
     useLayoutEffect(() => {
         let ctx;
@@ -75,7 +83,6 @@ const AssetBanner = ({ onCategoryChangeImg, onCategoryChangeText, onCategoryChan
         setAnimation();
         const handleResize = () => {
             setAnimation();
-            // ScrollTrigger.refresh();
         };
         window.addEventListener("resize", handleResize);
         return () => {
@@ -84,6 +91,7 @@ const AssetBanner = ({ onCategoryChangeImg, onCategoryChangeText, onCategoryChan
         }
     },[])
 
+    // 최상단 자동 스크롤
     useEffect(() => {
         window.scrollTo(0, 0);
     },[]);
@@ -100,18 +108,12 @@ const AssetBanner = ({ onCategoryChangeImg, onCategoryChangeText, onCategoryChan
             <div className="assetBanner__titleArea">
                 <h2
                     className="assetBanner__titleArea-titleText boxTitle"
-                    // data-aos="fade-right"
-                    // data-aos-duration="1100"
-                    // data-aos-delay="100"
                     aria-hidden="true"
                 >
                     {assetBanner.banner_text.title}
                 </h2>
                 <h3
                     className="assetBanner__titleArea-subtitleText boxSubtitle"
-                    // data-aos="fade-right"
-                    // data-aos-duration="1100"
-                    // data-aos-delay="200"
                     aria-hidden="true"
                 >
                     {selectedCategory_text[0]}<span class="mobile-br" />
@@ -120,9 +122,6 @@ const AssetBanner = ({ onCategoryChangeImg, onCategoryChangeText, onCategoryChan
                 </h3>
                 <div
                     className="slideBtn"
-                    // data-aos="fade-left"
-                    // data-aos-duration="1100"
-                    // data-aos-delay="600"
                     onClick={btnToggle}
                 >
                     <button 

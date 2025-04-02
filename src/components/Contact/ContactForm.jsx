@@ -2,10 +2,9 @@ import { React, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 
 const ContactForm = () => {
-    
 
+    // 화면의 너비에 따른 동적 GSAP
     const sectionRef = useRef();
-    // 모바일의 값에서는 translateX가 아닌 translateY의 값으로 등장해야 한다. 
     useLayoutEffect(() => {
         let ctx;
         const setAnimation = () => {
@@ -43,7 +42,6 @@ const ContactForm = () => {
         }
     },[])
 
-
     return (
         <section
             className="contactForm mobileBox pcBox"
@@ -53,11 +51,14 @@ const ContactForm = () => {
             <form 
                 className="contactForm__box mobileBox pcBox"
             >
-                <h4 className="contact__legend">문의자 정보</h4>
-
+                <h4 className="contact__legend">
+                    문의자 정보
+                </h4>
                 <div className="contact__nameArea">
                     <div className="contact__nameArea-item">
-                        <label htmlFor="user-firstName" className="contact__label">성</label>
+                        <label htmlFor="user-firstName" className="contact__label">
+                            성
+                        </label>
                         <input 
                             id="user-firstName" 
                             name="firstName" 
@@ -66,7 +67,9 @@ const ContactForm = () => {
                         />
                     </div>
                     <div className="contact__nameArea-item">
-                        <label htmlFor="user-lastName" className="contact__label">이름</label>
+                        <label htmlFor="user-lastName" className="contact__label">
+                            이름
+                        </label>
                         <input 
                             id="user-lastName" 
                             name="lastName" 
@@ -77,7 +80,9 @@ const ContactForm = () => {
                 </div>
 
                 <div className="contact__emailArea">
-                    <label htmlFor="user-emailAdress" className="contact__label">이메일주소</label>
+                    <label htmlFor="user-emailAdress" className="contact__label">
+                        이메일주소
+                    </label>
                     <input 
                         id="user-emailAdress" 
                         name="emailAdress" 
@@ -87,7 +92,9 @@ const ContactForm = () => {
                 </div>
 
                 <div className="contact__companyArea">
-                    <label htmlFor="user-company" className="contact__label">소속(회사)</label>
+                    <label htmlFor="user-company" className="contact__label">
+                        소속(회사)
+                    </label>
                     <input 
                         id="user-company" 
                         name="companyName" 
@@ -97,7 +104,9 @@ const ContactForm = () => {
                 </div>
 
                 <div className="contact__companywebArea">
-                    <label htmlFor="user-companyWeb" className="contact__label">소속회사 웹페이지</label>
+                    <label htmlFor="user-companyWeb" className="contact__label">
+                        소속회사 웹페이지
+                    </label>
                     <input 
                         id="user-companyWeb" 
                         name="companySite" 
@@ -106,23 +115,43 @@ const ContactForm = () => {
                     />
                 </div>
                 <div className="contact__country">
-                    <label htmlFor="user-country" className="contact__label">국가</label>
+                    <label htmlFor="user-country" className="contact__label">
+                        국가
+                    </label>
                     <select id="user-country" className="contact__input">
-                        <option value="선택하세요">선택</option>
-                        <option value="첫 번째 옵션">첫 번째 옵션</option>
-                        <option value="두 번째 옵션">두 번째 옵션</option>
-                        <option value="세 번째 옵션">세 번째 옵션</option>
+                        <option value="선택하세요">
+                            선택
+                        </option>
+                        <option value="첫 번째 옵션">
+                            첫 번째 옵션
+                        </option>
+                        <option value="두 번째 옵션">
+                            두 번째 옵션
+                        </option>
+                        <option value="세 번째 옵션">
+                            세 번째 옵션
+                        </option>
                     </select>
                 </div>
                 <div className="contact__phoneArea">
                     <div className="contact__phoneArea-block">
-                        <label htmlFor="user-phoneNumber" className="contact__label">휴대전화번호</label>
+                        <label htmlFor="user-phoneNumber" className="contact__label">
+                            휴대전화번호
+                        </label>
                         <div className="contact__inputs">
                             <select id="user-phoneNumber" className="contact__inputs-input">
-                                <option value="선택하세요">선택</option>
-                                <option value="첫 번째 옵션">첫 번째 옵션</option>
-                                <option value="두 번째 옵션">두 번째 옵션</option>
-                                <option value="세 번째 옵션">세 번째 옵션</option>
+                                <option value="선택하세요">
+                                    선택
+                                </option>
+                                <option value="첫 번째 옵션">
+                                    첫 번째 옵션
+                                </option>
+                                <option value="두 번째 옵션">
+                                    두 번째 옵션
+                                </option>
+                                <option value="세 번째 옵션">
+                                    세 번째 옵션
+                                </option>
                             </select>
                             <input className="contact__inputs-input" name="phoneSecond" type="text" />
                         </div>
@@ -134,26 +163,48 @@ const ContactForm = () => {
                 </h4>
                 <div className="contact__contentArea">
                     <div className="contact__contentArea-item">
-                        <label htmlFor="user-type" className="contact__label">문의유형</label>
+                        <label htmlFor="user-type" className="contact__label">
+                            문의유형
+                        </label>
                         <select id="optionSelect" className="contact__input">
-                            <option value="선택하세요">선택</option>
-                            <option value="첫 번째 옵션">첫 번째 옵션</option>
-                            <option value="두 번째 옵션">두 번째 옵션</option>
-                            <option value="세 번째 옵션">세 번째 옵션</option>
+                            <option value="선택하세요">
+                                선택
+                            </option>
+                            <option value="첫 번째 옵션">
+                                첫 번째 옵션
+                            </option>
+                            <option value="두 번째 옵션">
+                                두 번째 옵션
+                            </option>
+                            <option value="세 번째 옵션">
+                                세 번째 옵션
+                            </option>
                         </select>
                     </div>
                     <div className="contact__contentArea-item">
-                        <label htmlFor="user-topic" className="contact__label">주제</label>
+                        <label htmlFor="user-topic" className="contact__label">
+                            주제
+                        </label>
                         <select id="optionSelect" className="contact__input">
-                            <option value="선택하세요">선택</option>
-                            <option value="첫 번째 옵션">첫 번째 옵션</option>
-                            <option value="두 번째 옵션">두 번째 옵션</option>
-                            <option value="세 번째 옵션">세 번째 옵션</option>
+                            <option value="선택하세요">
+                                선택
+                            </option>
+                            <option value="첫 번째 옵션">
+                                첫 번째 옵션
+                            </option>
+                            <option value="두 번째 옵션">
+                                두 번째 옵션
+                            </option>
+                            <option value="세 번째 옵션">
+                                세 번째 옵션
+                            </option>
                         </select>
                     </div>
                 </div>
                 <div className="contact__titleArea">
-                    <label htmlFor="user-inquiryTitle" className="contact__label">문의제목</label>
+                    <label htmlFor="user-inquiryTitle" className="contact__label">
+                        문의제목
+                    </label>
                     <input 
                         id="user-inquiryTitle" 
                         name="inquiryTitle" 
@@ -162,11 +213,15 @@ const ContactForm = () => {
                     />
                 </div>
                 <div className="contact__content">
-                    <label htmlFor="user-inquiryContent" className="contact__label">문의내용</label>
+                    <label htmlFor="user-inquiryContent" className="contact__label">
+                        문의내용
+                    </label>
                     <textarea id="user-inquiryContent" className="contact__input" />
                 </div>
                 <div className="fileThrow">
-                    <h2 className="fileThrow__title">파일첨부</h2>
+                    <h2 className="fileThrow__title">
+                        파일첨부
+                    </h2>
                     <h2 className="fileThrow__subTitle">
                         ※ 첨부 가능한 이미지 파일 확장자 : jp(e)g, gif, png(최대 5개 / 파일용량 : 5MB)
                     </h2>
@@ -178,7 +233,9 @@ const ContactForm = () => {
                     파일 첨부
                 </button>
                 <div className="agreeArea">
-                    <h2 className="agreeArea__title">[필수] 개인정 수집 이용 동의</h2>
+                    <h2 className="agreeArea__title">
+                        [필수] 개인정 수집 이용 동의
+                    </h2>
                     <div className="agreeArea__info">
                         <ul>
                             <li>

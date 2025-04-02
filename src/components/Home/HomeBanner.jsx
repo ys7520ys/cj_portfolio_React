@@ -1,12 +1,13 @@
-import { React, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { React, useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { homeBanner } from "../../constants/data/home";
 
 const HomeBanner = () => {
+
+    // 화면의 너비에 따른 동적 GSAP
     const sectionRef = useRef();
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
-            // 각 요소의 값에 딜레이의 값을 구성하여 순서대로 등장하게 구성하였다.
             gsap.from(".boxTitle", {
                 opacity: 0,
                 y: 50,
@@ -59,9 +60,11 @@ const HomeBanner = () => {
         return () => ctx.revert(); 
     },[])
 
+    // 최상단 자동 스크롤
     useEffect(() => {
         window.scrollTo(0,0);
     });
+
     return (
         <section 
             className="homeBanner" 
