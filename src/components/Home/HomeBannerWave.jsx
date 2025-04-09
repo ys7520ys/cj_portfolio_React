@@ -17,7 +17,6 @@ const HomeBannerWave = () => {
             yoyo: true,
             ease: "power1.inOut",
         });
-
         gsap.to(wave2Ref.current, {
             x: "200px",
             duration: 4,
@@ -25,7 +24,6 @@ const HomeBannerWave = () => {
             yoyo: true,
             ease: "power2.inOut",
         });
-
         gsap.to(wave3Ref.current, {
             x: "250px",
             duration: 3,

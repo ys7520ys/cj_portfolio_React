@@ -54,8 +54,6 @@ const HomeBanner = () => {
                 duration: 0.5,
                 ease: "power1.out",
             });
-
-            
         }, sectionRef)
         return () => ctx.revert(); 
     },[])

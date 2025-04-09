@@ -70,13 +70,11 @@ const NewsBanner = () => {
         >
             <div className="newsBanner__titleArea">
                 <h2 
-
                     className="newsBanner__titleArea-titleText boxTitle"
                 >
                     {newsBanner.banner_text.title}
                 </h2>
                 <h3 
-
                     className="newsBanner__titleArea-subtitleText boxSubtitle"
                 >
                     {newsBanner.banner_text.subTitle[0]}<span class="mobile-br" />
