@@ -118,7 +118,6 @@ const AboutNumber = () => {
                 </h4>
             </div>
             <div className="aboutNumber__numBox">
-
                 <p className="sr-only">해당 회사가 이룬 성과들을 알아보아요.</p>
                 <h3
                     className="aboutNumber__numBox-title"
@@ -147,7 +146,6 @@ const AboutNumber = () => {
                             <span ref={numberRefs[0]}>0</span>+
                         </p>
                     </div>
-
                     <p className="sr-only">누적거래 파트너사 150개 이상 달성</p>
                     <div
                         className="content"
@@ -165,7 +163,6 @@ const AboutNumber = () => {
                             <span ref={numberRefs[1]}>0</span>+
                         </p>
                     </div>
-
                     <p className="sr-only">상품화 사례 3000개 이상 달성</p>
                     <div
                         className="content"
