@@ -5,19 +5,19 @@ REACT 기반 "CJ ENM (클론)" 퍼블리싱 포트폴리오
 <https://subtle-panda-ef9709.netlify.app>
 
 ## 개요 (OverView)
-원래 존재하는 CJ ENM 홈페이지를 기반으로␣␣
+원래 존재하는 CJ ENM 홈페이지를 기반으로
 UI,UX를 개선한 형태의 클론코딩 사이트입니다.
 
 ## 기술 스택 (Tech Stack)
-Component␣␣
-Router␣␣
-useEffect␣␣
-useState␣␣
-useRef␣␣
-Link␣␣
-GSAP(motion.div)␣␣
-AOS␣␣
-Helmet(seo)
+- Component
+- Router
+- useEffect
+- useState
+- useRef
+- Link
+- GSAP(motion.div)
+- AOS
+- Helmet(seo)
 
 ## 폴더 구조
 <pre>
@@ -205,13 +205,13 @@ Helmet(seo)
 </pre>
 
 ## 주요 기능
-반응형 웹 (PC/Tablet/Mobile 대응)␣␣
-시맨틱 마크업 및 웹 표준 준수␣␣
-웹표준, 웹접근성␣␣
-애니메이션␣␣
-개별 데이터파일 연동␣␣
+- 반응형 웹 (PC/Tablet/Mobile 대응)
+- 시맨틱 마크업 및 웹 표준 준수
+- 웹표준, 웹접근성
+- 애니메이션
+- 개별 데이터파일 연동
 
 ## 제작자
-이름: 김예성␣␣
-이메일: ys7520ys@naver.com␣␣
-포트폴리오: "CJ ENM (클론)"␣␣
+- 이름: 김예성
+- 이메일: ys7520ys@naver.com
+- 포트폴리오: "CJ ENM (클론)"
